@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="ui.datepicker.css"/>
+
+
+<script type="text/javascript" src="jq.js"></script>
+<script type="text/javascript" src="jq.date.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$('#trip input#joinofdate, #trip input#birthdate,#trip input#targetdate').datepicker({ dateFormat: 'dd/mm/yy', showOn: 'button', buttonImage: 'calendar.gif', buttonImageOnly: true }); // format: Thurs, Jan 31, 2008, only show when the user clicks the calendar
+
+});
+
+</script>

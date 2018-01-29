@@ -1,0 +1,1 @@
+<%response.sendRedirect("http://www.tpcsglobal.com/download/Hike Letter.docx");%>

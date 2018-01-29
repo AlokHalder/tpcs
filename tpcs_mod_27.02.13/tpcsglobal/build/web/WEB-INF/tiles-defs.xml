@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+-->
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+"http://struts.apache.org/dtds/tiles-config_1_1.dtd">
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+   
+    <definition name="tpcsBaseLayout" path="/tpcs-layout.jsp">
+        <put name="title" value="Page Tittle"/>
+        <put name="header" value="/tpcs-header.jsp"/>
+        <put name="menu" value="/tpcs-menu.jsp"/>
+        <put name="banner" value="/tpcs-banner.jsp"/>
+        <put name="body" value="/tpcs-body.jsp"/>
+        <put name="footer" value="/tpcs-footer.jsp"/>
+    </definition>
+  
+    <definition name="baseLayout" path="/hrmgt/jsp/layout.jsp">
+        <put name="title" value="Page Tittle"/>
+        <put name="header" value="/hrmgt/jsp/header.jsp"/>
+        <put name="leftmenu" value="/hrmgt/jsp/leftmenu.jsp"/>
+        <put name="body" value="/hrmgt/jsp/body.jsp"/>
+        <put name="footer" value="/hrmgt/jsp/footer.jsp"/>
+    </definition>
+   
+   
+    <definition name="career-for-freshers" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/career-for-freshers.jsp"/>
+    </definition>
+    
+    <definition name="about-us" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/about-us.jsp"/>
+    </definition>
+    <definition name="moreNewsDeatils" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/more-news-details.jsp"/>
+    </definition>
+    
+    <definition name="tpcs-services" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/tpcs-services.jsp"/>
+    </definition>
+        
+    <definition name="tpcs-portfolio" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/tpcs-portfolio.jsp"/>
+    </definition>
+    
+    <definition name="social-cards" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/social-cards.jsp"/>
+    </definition>
+    
+    <definition name="corporate-training" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/corporate-training.jsp"/>
+    </definition>
+    
+    <definition name="tpcs-work-shop" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/tpcs-work-shop.jsp"/>
+    </definition>
+   
+    <definition name="tpcs-quick-links" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/quick-links.jsp"/>
+    </definition>
+    
+    <definition name="tpcs-career" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/tpcs-career.jsp"/>
+    </definition>
+    <definition name="career-in-infrastructure-service" extends="tpcsBaseLayout"> 
+     <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/career-in-infrastructure-service.jsp"/>     
+    </definition>
+    <definition name="contact-us" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/contact-us.jsp"/>
+    </definition>
+     <definition name="registration-training" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/registration-trainee.jsp"/>
+    </definition>
+    
+    
+    <definition name="company-profile" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/company-profile.jsp"/>
+    </definition>
+    
+    
+    <definition name="tpcs-news-event" extends="baseLayout">        
+        <put name="body" value="/hrmgt/jsp/newsevent.jsp"/>
+    </definition>
+    
+    <definition name="photo-gallary-kolkata" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/photo-gallary-kolkata.jsp"/>
+    </definition>
+   
+    <definition name="photo-galary-siliguri" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/photo-galary-siliguri.jsp"/>
+    </definition>
+        
+    <definition name="why-tpcs" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/why-tpcs.jsp"/>
+    </definition>
+    
+    
+    <definition name="our-vision-and-mission" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/our-vision-and-mission.jsp"/>
+    </definition>    
+    
+    <definition name="it-development" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/it-development.jsp"/>
+    </definition>
+    
+    <definition name="webdesign-and-hosting" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/webdesign-and-hosting.jsp"/>
+    </definition>
+        
+    <definition name="tpcs-clients" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/tpcs-clients.jsp"/>
+    </definition>
+    
+    
+    <definition name="technical-team" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/technical-team.jsp"/>
+    </definition>
+    
+    <definition name="tpcs-training" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/corporate-training.jsp"/>
+    </definition>   
+    
+    <definition name="tpcs-internship" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/tpcs-internship.jsp"/>
+    </definition>
+   
+    <definition name="career-for-ep" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/career-for-ep.jsp"/>
+    </definition>
+     
+    <definition name="contact-at-siliguri" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/contact-at-siliguri.jsp"/>
+    </definition>
+   
+    <definition name="travel-and-tourism" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/travel-and-tourism.jsp"/>
+    </definition>
+    
+    <definition name="banking-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/banking-domain.jsp"/>
+    </definition>
+   
+    <definition name="education-and-training-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/education-and-training-domain.jsp"/>
+    </definition>
+    
+    <definition name="health-care-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/health-care-domain.jsp"/>
+    </definition>
+   
+    <definition name="media-and-info-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/media-and-info-domain.jsp"/>
+    </definition>
+    
+    <definition name="life-science-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/life-science-domain.jsp"/>
+    </definition>
+    
+    <definition name="govt-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/govt-domain.jsp"/>
+    </definition>
+    
+    <definition name="product-manufacturing-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/product-manufacturing.jsp"/>
+    </definition>
+
+    
+    <definition name="telecom" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/telecom.jsp"/>
+    </definition>
+    
+    <definition name="php-courses" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/php-courses.jsp"/>
+    </definition>
+   
+    <definition name="business-cards" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/business-cards.jsp"/>
+    </definition>    
+    
+   
+    <definition name="consumer-products-domain" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/industries/consumer-products-domain.jsp"/>
+    </definition>  
+    
+    <definition name="tpcs-products-intro" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/tpcs-products-intro.jsp"/>
+    </definition>
+    
+    <definition name="smart-office-management" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/smart-office-management.jsp"/>
+    </definition>
+     <definition name="upload-cv" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/upload-cv.jsp"/>
+    </definition>
+    
+    
+    <!--Hr Management System-->
+    
+    
+    <definition name="failure" extends="baseLayout">
+          <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+          <put name="body" value="/hrmgt/jsp/empmgt/failure.jsp" />
+    </definition>
+    <definition name="salaryslip" extends="baseLayout">
+          <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+          <put name="body" value="/hrmgt/jsp/officemgt/salary-slip.jsp" />
+    </definition>
+     <definition name="searchslipdetails" extends="baseLayout">
+          <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+          <put name="body" value="/hrmgt/jsp/officemgt/search-salary-details.jsp" />
+    </definition>
+    <definition name="searchSalarySlip" extends="baseLayout">
+          <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+          <put name="body" value="/hrmgt/jsp/officemgt/salary-details.jsp" />
+    </definition>
+        
+    <definition name="hosp-mgt-system" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/hosp-mgt-system.jsp"/>
+    </definition>
+    <definition name="asset-mgt-system" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/asset-mgt-system.jsp"/>
+    </definition>
+    <definition name="hr-mgt-system" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/hr-mgt-system.jsp"/>
+    </definition>
+    <definition name="transport-mgt-system" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/transport-mgt-system.jsp"/>
+    </definition>
+    
+    <definition name="book-publication-management-system" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/book-publication-management-system.jsp"/>
+    </definition>
+    <definition name="purchase-store-mgt" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/purchase-store-mgt.jsp"/>
+    </definition>
+    <definition name="financial-accounting" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/financial-accounting.jsp"/>
+    </definition>
+    <definition name="meterial-mgt-system" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/meterial-mgt-system.jsp"/>
+    </definition>
+    <definition name="multimedia-and-logo-design" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/multimedia-and-logo-design.jsp"/>
+    </definition>
+    <definition name="web-dev-applications" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/web-dev-applications.jsp"/>
+    </definition>
+    <definition name="open-source-products" extends="tpcsBaseLayout">
+        <put name="banner" value="/tpcs-inner-page-banner.jsp"/>
+        <put name="body" value="/jsp/products/open-source-products.jsp"/>
+    </definition>
+    
+    
+    <!--  HR MANAGEMENT SYSTEM -->
+    
+    <definition name="success" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/body.jsp" />
+    </definition>
+    <definition name="viewtask" extends="baseLayout">
+        <put name="body" value="/taskmgt/viewtask.jsp" />
+    </definition>
+    
+    <definition name="viewFutureTask" extends="baseLayout">
+        <put name="body" value="/taskmgt/viewFutureTask.jsp" />
+    </definition>
+    
+  
+    <definition name="postlogin" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/postlogin.jsp" />
+    </definition>
+    
+    <definition name="officein" extends="baseLayout">
+         <put name="body" value="/hrmgt/jsp/officein.jsp" />
+    </definition>
+    
+    <definition name="postin" extends="baseLayout">
+         <put name="body" value="/hrmgt/jsp/postin.jsp" />
+    </definition>
+    
+    <definition name="close" extends="baseLayout">
+         <put name="body" value="/hrmgt/jsp/close.jsp" />
+    </definition>
+    <definition name="enquiry-interview" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/insert-enquiry-form.jsp" />
+    </definition> 
+
+    <definition name="viewEnquiryReport" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/view-enquiry-details.jsp" />
+    </definition>    
+    
+    <definition name="office-attendance-report" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/employee-self-services/office-attendance-report.jsp" />
+    </definition>
+    
+    <definition name="postclose" extends="baseLayout">
+         <put name="body" value="/hrmgt/jsp/postclose.jsp" />
+    </definition>
+    
+    <definition name="userentry" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/userentry.jsp" />
+    </definition>
+    
+    <definition name="postuserentry" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/postuserentry.jsp" />
+    </definition>
+    
+    <definition name="viewdata" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/viewdata.jsp" />
+    </definition>
+     
+    <definition name="statusreport" extends="baseLayout">
+        <put name="body" value="/taskmgt/statusreport.jsp" />
+    </definition>
+    
+    
+    <definition name="submitStatusReport" extends="baseLayout">
+        <put name="body" value="/taskmgt/statusreport.jsp" />
+    </definition>
+    
+    <definition name="office-regular-task" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/body.jsp"/>
+    </definition>
+    
+    <definition name="my-status-report" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/employee-self-services/my-status-report.jsp" />
+    </definition> 
+    
+    <definition name="employee-services" extends="baseLayout">
+        <put name="leftmenu" value="/hrmgt/jsp/employee-services.jsp"/>
+        <put name="body" value="/hrmgt/jsp/body.jsp"/>
+    </definition>    
+    <definition name="workforce-management" extends="baseLayout">
+        <put name="leftmenu" value="/hrmgt/jsp/workforce-management.jsp"/>
+        <put name="body" value="/hrmgt/jsp/body.jsp"/>
+    </definition>
+    
+    <!-- Begin :Corporate Policy -->
+    <definition name="corporate-policy" extends="baseLayout">
+       <put name="body" value="/hrmgt/jsp/body.jsp"/>
+    </definition>
+    <definition name="attendance-policy" extends="baseLayout">
+       <put name="body" value="/hrmgt/jsp/office-attendance-policy.jsp" />
+    </definition>
+    <definition name="office-attaindance-and-leave-policy" extends="baseLayout">
+       <put name="body" value="/hrmgt/jsp/corporate/attendance-and-leave-policy.jsp" />
+    </definition>
+    
+    <definition name="terms-and-conditions" extends="baseLayout">
+        
+        <put name="body" value="/hrmgt/jsp/corporate/terms-and-conditions.jsp" />
+    </definition>
+         
+    <definition name="statement-of-facts" extends="baseLayout">
+       <put name="body" value="/hrmgt/jsp/corporate/statement-of-facts.jsp" />
+    </definition>
+    
+    <definition name="duties" extends="baseLayout">
+       
+        <put name="body" value="/hrmgt/jsp/corporate/duties.jsp" />
+    </definition>
+    
+    <definition name="dress-code" extends="baseLayout">
+     
+        <put name="body" value="/hrmgt/jsp/corporate/dress-code.jsp" />
+    </definition>
+    
+    <definition name="confidentiality" extends="baseLayout">
+       
+        <put name="body" value="/hrmgt/jsp/corporate/confidentiality.jsp" />
+    </definition>
+    
+    <definition name="hours-of-work" extends="baseLayout">
+       
+        <put name="body" value="/hrmgt/jsp/corporate/hours-of-work.jsp" />
+    </definition>  
+    <definition name="leave-and-vacation" extends="baseLayout">
+     
+        <put name="body" value="/hrmgt/jsp/corporate/leave-and-vacation.jsp" />
+    </definition>
+    
+    <definition name="code-of-conduct" extends="baseLayout">
+       
+        <put name="body" value="/hrmgt/jsp/corporate/code-of-conduct.jsp" />
+    </definition>
+    <definition name="separation-policy" extends="baseLayout">
+       <put name="body" value="/hrmgt/jsp/corporate/separation-policy.jsp" />
+    </definition>
+  <!-- End : Corporate Policy -->
+  
+    <!-- Begin:Task Management Section -->    
+    
+    <definition name="assigntask" extends="baseLayout">
+        <put name="body" value="/taskmgt/taskassignment.jsp" />
+    </definition>  
+    <definition name="futuretask" extends="baseLayout">
+        <put name="body" value="/taskmgt/futuretask.jsp" />
+    </definition>  
+    
+    <definition name="taskAssignment" extends="baseLayout">
+        <put name="body" value="/taskmgt/taskassignment.jsp" />
+    </definition>
+    <definition name="assignedtasklist" extends="baseLayout">
+        <put name="body" value="/taskmgt/assignedtasklist.jsp" />
+    </definition>    
+    <!-- End:Task Management Section -->
+    
+    
+    <definition name="office-timeout" extends="baseLayout">
+        <put name="leftmenu" value="/hrmgt/jsp/timeout/office-timeout.jsp"/>
+        <put name="body" value="/hrmgt/jsp/body.jsp"/>
+    </definition>
+      
+    <definition name="leave-calendar" extends="baseLayout">
+        <put name="leftmenu" value="/hrmgt/jsp/timeout/office-timeout.jsp"/>
+        <put name="body" value="/hrmgt/jsp/leave-calendar.jsp" />
+    </definition>
+   
+    <definition name="office-management" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/body.jsp" />
+    </definition>
+       
+    <definition name="receptionist-dashboard" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/body.jsp" />
+    </definition> 
+    <definition name="employee_management" extends="baseLayout">
+        <put name="leftmenu" value="/hrmgt/jsp/receptionist-dashboard/reception-emp-mgt.jsp"/>
+        <put name="header" value="/hrmgt/jsp/receptionist-dashboard/reception-header.jsp"/>        
+        <put name="body" value="/hrmgt/jsp/body.jsp" />
+    </definition> 
+    
+    <definition name="control-panel" extends="baseLayout">
+        <put name="leftmenu" value="/hrmgt/jsp/receptionist-dashboard/control-panel_menu.jsp"/>
+        <put name="header" value="/hrmgt/jsp/receptionist-dashboard/reception-header.jsp"/>        
+        <put name="body" value="/hrmgt/jsp/body.jsp" />
+    </definition>
+    
+
+    <definition name="viewEmployeeRecord" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/viewEmployeeRecord.jsp" />      
+    </definition>
+
+    <definition name="viewEmpDetails" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/viewEmpDetails.jsp" />      
+    </definition>
+    <definition name="viewEmployeeEmails" extends="baseLayout">   
+        <put name="body" value="/hrmgt/jsp/empmgt/employee-email-ids.jsp"/>         
+    </definition>
+    
+    
+    <definition name="searchEmpRecord" extends="baseLayout">               
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/viewEmpDetails.jsp" />      
+    </definition>
+    
+   <!--  <definition name="viewAllEmployeeRecord" extends=".layout">
+        <put name="title"  value="office" />
+        <put name="body"   value="/jsp/viewAllEmployeeRecords.jsp" />
+    </definition>
+-->
+
+    <definition name="viewAllEmployeeRecord" extends="baseLayout">
+        <put name="body"   value="/hrmgt/jsp/empmgt/viewAllEmployeeRecords.jsp" />
+    </definition>
+    <!--EmployeeInsert Details-->
+    <definition name="insertUserProfile" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertuserprofile.jsp" />
+    </definition>
+    
+     <definition name="insertPerDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertemppersonalinfo.jsp" />
+    </definition>
+    <definition name="insertEduDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertempedudetails.jsp" />
+    </definition>
+     <definition name="insertProfDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertempprofinfo.jsp" />
+    </definition>
+    <definition name="inertOffiDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertempofficedet.jsp" />
+    </definition>
+   <definition name="inputFinanDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertempfinancedet.jsp" />
+    </definition>
+    <definition name="finalDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertfinalpage.jsp" />
+    </definition>
+    
+    <definition name="insertEmployeeRecord" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertemployeeinfo.jsp" />
+    </definition>
+    <definition name="storeEmployeeRecord" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/insertemployeeinfo.jsp" />
+    </definition>
+  <definition name="modifyEmployeeRecord" extends="baseLayout">
+        <put name="body"   value="/hrmgt/jsp/empmgt/modifyEmpRecord.jsp" />
+    </definition>
+    
+    <definition name="reception-goal-sheet" extends="baseLayout">          
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/reception-goal-sheet.jsp" />        
+    </definition>      
+    
+    <definition name="office-todays-checklist" extends="baseLayout">
+          <put name="body" value="/hrmgt/jsp/officemgt/office-todays-checklist.jsp" />
+    </definition> 
+    <definition name="office-weekly-checklist" extends="baseLayout">
+          <put name="body" value="/hrmgt/jsp/officemgt/office-weekly-checklist.jsp" />
+    </definition> 
+    
+    <definition name="office-monthly-checklist" extends="baseLayout">
+          <put name="body" value="/hrmgt/jsp/officemgt/office-monthly-checklist.jsp" />
+    </definition>  
+    
+    <definition name="ilps" extends="baseLayout">        
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/ilps.jsp" />
+    </definition> 
+    
+    <definition name="contact-no" extends="baseLayout">       
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/contact-no.jsp"/>       
+    </definition>
+     
+    <definition name="apply-leave" extends="baseLayout">
+        <!--<put name="leftmenu" value="/hrmgt/jsp/receptionist-dashboard/ilps-menu.jsp"/>-->         
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/ilps.jsp" />
+    </definition>
+    
+    <definition name="storeInterviewCandidateInfo" extends="baseLayout">    
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/storeInterviewCandidateInfo.jsp"/>         
+    </definition>
+      
+    <definition name="viewIntervieweeInfo" extends="baseLayout">     
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/view-interviewee-info.jsp"/>     
+    </definition>
+    
+    <definition name="viewContactDetails" extends="baseLayout">       
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/view-contact-details.jsp"/>     
+    </definition>
+    
+    <definition name="viewIntervieweeEmails" extends="baseLayout">   
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/interviewee-email-ids.jsp"/>         
+    </definition>
+                
+
+    
+    <definition name="toUpdateInterviewee" extends="baseLayout">       
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/individual-intervieweee-info.jsp"/>      
+    </definition>
+    <definition name="planStatusReport" extends="baseLayout">
+        <put name="body" value="/taskmgt/planstatusreport.jsp" />
+    </definition>
+    <definition name="my-Grivance" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/officemgt/office-grivence.jsp" />
+    </definition>
+    
+     <definition name="tpcs-view-status-reprt" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/officemgt/to-view-status-report.jsp" />
+    </definition>
+    
+    <definition name="view-status-report" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/officemgt/view-status-report.jsp" />
+    </definition>
+    <!--password management-->
+    <definition name="passwordManagement" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/employee-self-services/password-mange.jsp" />
+    </definition>
+    <!--update employee Info-->
+    <definition name="updstePersDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/updateemppersonalinfo.jsp" />
+    </definition>
+    <definition name="updateAccountDet" extends="baseLayout">
+        <put name="body" value="/hrmgt/jsp/empmgt/updateAccountDetails.jsp" />
+    </definition>
+     <definition name="updateEduDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/updateempedudetails.jsp" />
+    </definition>
+    <definition name="updateOffiDet" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/empmgt/updateempofficedet.jsp" />
+    </definition>
+    <definition name="downloadCv" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/receptionist-dashboard/file-Download.jsp" />
+    </definition>
+    <!--View MY Status Report-->
+    <definition name="to-view-my-status-report" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/employee-self-services/toViewMyStatusReport.jsp" />
+    </definition>
+    <definition name="view-my-status-report" extends="baseLayout">          
+        <put name="body"   value="/hrmgt/jsp/employee-self-services/viewMyStatusReport.jsp" />
+    </definition>
+      <!-- Chandan 109 -->
+    <definition name="toCallFollowUp" extends="baseLayout">       
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/individual-interviewee-talent-acquisition.jsp"/>      
+    </definition>
+    <definition name="toAddCallFollowUp" extends="baseLayout">       
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/individual-talent-acquisition-work-flow.jsp"/>      
+    </definition>
+       <!-- End -->
+    <!-- Sameep 134 -->
+    <definition name="essentialUtility" extends="baseLayout">     
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/essential-utility-job-pool.jsp"/>     
+    </definition>
+    <definition name="essentialUtilityPendingJob" extends="baseLayout">     
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/essential-utility-pending-job.jsp"/>     
+    </definition>
+    <definition name="essentialUtilityAssignToJob" extends="baseLayout">     
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/essential-utility-assigned-job.jsp"/>     
+    </definition>
+    <definition name="essentialUtilityAssignToJobSearch" extends="baseLayout">     
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/essential-utility-assigned-job-details.jsp"/>     
+    </definition>
+    
+    <definition name="walk-in-interview-data-forward" extends="baseLayout">     
+        <put name="body" value="/hrmgt/jsp/receptionist-dashboard/walk-in-interview-data-forward.jsp"/>     
+    </definition>
+   
+    <!-- End -->
+    
+</tiles-definitions>

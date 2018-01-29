@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="scheduleInterviewForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="day" type="java.lang.Integer"/>
+            <form-property name="month" type="java.lang.String"/>
+            <form-property name="year" type="java.lang.String"/>
+            <form-property name="message" type="java.lang.String"/>
+            
+        </form-bean> 
+    
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+    </global-forwards>
+
+    <action-mappings>
+        
+        <action path="/walk-in-interview-data-forward" type="org.apache.struts.actions.ForwardAction" parameter="walk-in-interview-data-forward"/>  
+        <action input="walk-in-interview-data-forward" name="scheduleInterviewForm" path="/schedule-interview" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="scheduleInterview" >
+            <forward name="success" path="walk-in-interview-data-forward"/>
+        </action>
+        
+        <action input="storeInterviewCandidateInfo" name="storeInterviewCandidateFormBean" path="/interviewee-info" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="intervieweeInfo" validate="false">
+            <forward name="successs" path="storeInterviewCandidateInfo"/>
+        </action>
+        <action input="/interviewee-info.do" name="storeInterviewCandidateFormBean" path="/add-interviewee-info" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="storeInterviewCandidateInfo" validate="true">
+            <forward name="storeInterviewCandidateInfo" path="storeInterviewCandidateInfo"/>
+        </action>
+        <action input="" name="viewInterviewCandidateFormBean" path="/view-interviewee-info" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="viewInterviewCandidateInfo" validate="false">
+            <forward name="viewIntervieweeInfo" path="viewIntervieweeInfo"/>
+        </action>
+        <action input="" name="storeInterviewCandidateFormBean" path="/to-update-interviewee" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="toUpdateInterviewee" validate="false">
+            <forward name="toUpdateInterviewee" path="toUpdateInterviewee"/>
+        </action>
+        <action input="" name="storeInterviewCandidateFormBean" path="/update-interviewee-info" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="updateIntervieweeInfo" validate="false">
+            <forward name="toUpdateInterviewee" path="toUpdateInterviewee"/>
+        </action>
+        <action input="" name="storeInterviewCandidateFormBean" path="/to-call-follow-up" scope="request" type="com.admin.taskmgt.action.TalentAcquisitionAction" parameter="toCallFollowUp" validate="false">
+            <forward name="success" path="toCallFollowUp"/>
+        </action>
+        <action input="" name="storeInterviewCandidateFormBean" path="/to-add-work-flow" scope="request" type="com.admin.taskmgt.action.TalentAcquisitionAction" parameter="toAddCallFollowUp" validate="false">
+            <forward name="success" path="toAddCallFollowUp"/>
+        </action>
+        <action input="" name="storeInterviewCandidateFormBean" path="/add-work-flow" scope="request" type="com.admin.taskmgt.action.TalentAcquisitionAction" parameter="addCallFollowUp" validate="false">
+            <forward name="success" path="toCallFollowUp"/>
+        </action>
+        <!-- Job pool -->
+        <action path="/create-jobs-request" type="org.apache.struts.actions.ForwardAction" parameter="essentialUtility" name="essentialUtilityForm" validate="false" scope="request"/>
+
+        <action input="" name="essentialUtilityForm" path="/create-job" scope="request" type="com.admin.taskmgt.action.EssentialUtilityAction" parameter="createNewJob" validate="false">
+            <forward name="success" path="essentialUtility"/>
+        </action>
+        <action input="/" name="essentialUtilityForm" path="/pending-jobs" scope="request" type="com.admin.taskmgt.action.EssentialUtilityAction" parameter="pendingJob" validate="false" >
+            <forward name="success" path="essentialUtilityPendingJob"/>
+        </action>
+    
+        <action input="/" name="essentialUtilityForm" path="/to-assigned-job" scope="request" type="com.admin.taskmgt.action.EssentialUtilityAction" parameter="searchSingleJobDetail" validate="false">
+            <forward name="success" path="essentialUtilityAssignToJob"/>
+        </action>
+    
+        <action path="/assign-to" type="com.admin.taskmgt.action.EssentialUtilityAction" parameter="jobAssignTo" name="essentialUtilityForm" validate="false">
+            <forward name="success" path="essentialUtilityAssignToJob"/>       
+        </action>
+        
+        <action path="/search-for-assigned-who" type="com.admin.taskmgt.action.EssentialUtilityAction" parameter="jobAssignDetailsSearch" name="essentialUtilityForm" validate="false">
+            <forward name="success" path="essentialUtilityAssignToJobSearch"/>       
+        </action>
+        
+        <!-- End -->
+        
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+      <!-- ========================= Tiles plugin ===============================-->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+    <!--
+         This is a minimal Validator form file with a couple of examples.
+    -->
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+    <formset>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                <arg key="logonForm.password"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+        
+        
+        
+        <form name="loginActionForm">
+            <field
+                property="userid"
+                depends="required,integer">
+                <arg key="loginActionForm.userid"/>
+            </field>
+            <field
+                property="password"
+                depends="required">
+                <arg key="loginActionForm.password"/>
+                    
+            </field>
+        </form>
+        
+        
+        
+        <form name="employeeActionFormBean">
+            <field
+                property="name"
+                depends="required">
+                <arg key="employeeActionFormBean.name"/>
+            </field>
+            <field
+                property="dateofbirth"
+                depends="required,date">
+                
+                <arg key="employeeActionFormBean.dateofbirth"/>
+            </field>
+            <field
+                property="maritalstatus"
+                depends="required">
+                <arg key="employeeActionFormBean.maritalstatus"/>
+            </field>
+            <field
+                property="dateofjoining"
+                depends="required">
+                <arg key="employeeActionFormBean.dateofjoining"/>
+            </field>
+            <field
+                property="designation"
+                depends="required">
+                <arg key="employeeActionFormBean.designation"/>
+            </field>
+            <field
+                property="employmentstatus"
+                depends="required">
+                <arg key="employeeActionFormBean.employmentstatus"/>
+            </field>
+            <field
+                property="emailid"
+                depends="required,email">
+                <arg key="employeeActionFormBean.emailid"/>
+            </field>
+            <field
+                property="pin"
+                depends="required,long">
+                <arg key="employeeActionFormBean.pin"/>
+            </field>
+            <field
+                property="phone"
+                depends="required,long">
+                <arg key="employeeActionFormBean.phone"/>
+            </field>
+        </form>
+     
+    </formset>
+
+    <!-- An example formset for another locale -->
+    <formset language="fr">
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^[0-9a-zA-Z]*$</constant-value>
+        </constant>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                <arg key="logonForm.password"/>
+                <var>
+                    <var-name>mask</var-name>
+                    <var-value>^[0-9a-zA-Z]*$</var-value>
+                </var>
+            </field>
+        </form>
+
+    </formset>
+    <!--customer Contact Us -->
+    <formset>
+        <form name="contactusformbean">
+            <field
+                property="name"
+                depends="required">
+                <arg key="contactusformbean.name"/>
+            </field>
+            <field
+                property="email"
+                depends="required,email">
+                <arg key="contactusformbean.email"/>
+            </field>
+            <field
+                property="message"
+                depends="required">
+                <arg key="contactusformbean.message"/>
+            </field>
+        </form>
+        <form name="balanceForm">
+            <field
+                property="item"
+                depends="required">
+                <arg key="balanceForm.item"/>
+              
+            </field>
+            <field
+                property="price"
+                depends="required">
+                <arg key="balanceForm.price"/>
+              
+            </field>
+        
+        </form>    
+    </formset>
+    <!--Registarion Trainee-->
+    <formset>
+        <form name="regTraineeActionForm">
+            <field
+                property="name"
+                depends="required">
+                <arg key="regTraineeActionForm.name"/>
+            </field>
+            <field
+                property="email"
+                depends="required,email">
+                <arg key="regTraineeActionForm.email"/>
+            </field>
+            <field
+                property="phno"
+                depends="required">
+                <arg key="regTraineeActionForm.phno"/>
+            </field>
+            <field
+                property="message"
+                depends="required">
+                <arg key="regTraineeActionForm.message"/>
+            </field>
+        </form>
+    </formset>
+    <formset>
+        <form name="salaryAccontFormBean">
+            <field
+                property="salary"
+                depends="required">
+                <arg key="salaryAccontFormBean.salary"/>
+            </field>
+            <field
+                property="startingdate"
+                depends="required">
+                <arg key="salaryAccontFormBean.startingdate"/>
+            </field>
+            <field
+                property="endingdate"
+                depends="required">
+                <arg key="salaryAccontFormBean.endingdate"/>
+            </field>
+            <field
+                property="paymentdate"
+                depends="required">
+                <arg key="salaryAccontFormBean.paymentdate"/>
+            </field>
+            <field
+                property="paymenttype"
+                depends="required">
+                <arg key="salaryAccontFormBean.paymenttype"/>
+            </field>
+        </form>
+    </formset>
+    <!--Inert Employee details-->
+    <!--User Profile Details-->
+    <formset>
+        <form name="employeeProfFormBean">
+            <field
+                property="employeeId"
+                depends="required">
+                <arg key="employeeProfFormBean.employeeId"/>
+            </field>
+
+            <field
+                property="name"
+                depends="required">
+                <arg key="employeeProfFormBean.name"/>
+            </field>
+            <field
+                property="password"
+                depends="required">
+                <arg key="employeeProfFormBean.password"/>
+                    
+            </field>
+            <field
+                property="designation"
+                depends="required">
+                <arg key="employeeProfFormBean.designation"/>
+                   
+            </field>
+        </form>
+    </formset>
+    <!--personal details-->
+    <formset>
+        <form name="employeePerFormBean">
+            <field
+                property="address"
+                depends="required">
+                <arg key="employeePerFormBean.address"/>
+            </field>
+            <field
+                property="dateofbirth"
+                depends="required,date">
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/MM/yyyy</var-value>
+                </var>
+                <arg key="employeePerFormBean.dateofbirth"/>
+                    
+                    
+            </field>
+            <field
+                property="phone"
+                depends="required">
+                <arg key="employeePerFormBean.phone"/>
+                   
+            </field>
+            <field
+                property="maritalstatus"
+                depends="required">
+                <arg key="employeePerFormBean.maritalstatus"/>
+            </field>
+            <field
+                property="country_id"
+                depends="required">
+                <arg key="employeePerFormBean.country_id"/>
+            </field>
+            <field
+                property="gender"
+                depends="required">
+                <arg key="employeePerFormBean.gender"/>
+            </field>
+            <field
+                property="emailid"
+                depends="required,email">
+                <arg key="employeePerFormBean.emailid"/>
+            </field>
+            <field
+                property="pin"
+                depends="required">
+                <arg key="employeePerFormBean.pin"/>
+            </field>
+        </form>
+        <form name="employeeGrievance">
+            <field
+                property="grievance"
+                depends="required">
+                <arg key="employeeGrievance.grievance"/>
+            </field>
+        </form>
+    </formset>
+    <!--Educational details-->
+    <formset>
+        <form name="employeeEduFormBean">
+            <field
+                property="ug_qualification"
+                depends="required">
+                <arg key="employeeEduFormBean.ug_qualification"/>
+            </field>
+            <field
+                property="ug_specialization"
+                depends="required">
+                <arg key="employeeEduFormBean.ug_specialization"/>
+                    
+            </field>
+            <field
+                property="ug_passout"
+                depends="required">
+                <arg key="employeeEduFormBean.ug_passout"/>
+                   
+            </field>
+            <field
+                property="ug_university"
+                depends="required">
+                <arg key="employeeEduFormBean.ug_university"/>
+            </field>
+        </form>
+       
+    </formset>
+    <!--Office Details-->
+    <formset>
+        <form name="employeeOffiFormBean">
+            <field
+                property="dateofjoining"
+                depends="required,date">
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/MM/yyyy</var-value>
+                </var>
+                <arg key="employeeOffiFormBean.dateofjoining"/>
+            </field>
+            <field
+                property="status"
+                depends="required">
+                <arg key="employeeOffiFormBean.status"/>
+            </field>
+            <field
+                property="employeetype"
+                depends="required">
+                <arg key="employeeOffiFormBean.employeetype"/>
+            </field>
+            <field
+                property="grade"
+                depends="required">
+                <arg key="employeeOffiFormBean.grade"/>
+            </field>
+            <field
+                property="deputedlocation"
+                depends="required">
+                <arg key="employeeOffiFormBean.deputedlocation"/>
+            </field>
+            <field
+                property="baselocation"
+                depends="required">
+                <arg key="employeeOffiFormBean.baselocation"/>
+            </field>
+            <field
+                property="supervisorId"
+                depends="required">
+                <arg key="employeeOffiFormBean.supervisorId"/>
+            </field>
+            <field
+                property="parentIouId"
+                depends="required">
+                <arg key="employeeOffiFormBean.parentIouId"/>
+            </field>
+            <field
+                property="subIouId"
+                depends="required">
+                <arg key="employeeOffiFormBean.subIouId"/>
+            </field>
+        </form>   
+    </formset>
+    <!-- Employee Finance-->
+    <formset>
+        <form name="storeFinanDetBean">
+            <field
+                property="primarybankacc"
+                depends="required,long">
+                <arg key="storeFinanDetBean.primarybankacc"/>
+            </field> 
+        </form>
+    </formset>
+    <!--Password Management-->
+    <formset>
+        <form name="submitPasswordmgtFormBean">
+            <field
+                property="curpass"
+                depends="required">
+                <arg key="submitPasswordmgtFormBean.curpass"/>
+            </field> 
+            <field
+                property="newpass"
+                depends="required">
+                <arg key="submitPasswordmgtFormBean.newpass"/>
+            </field> 
+            <field
+                property="retypepass"
+                depends="required">
+                <arg key="submitPasswordmgtFormBean.retypepass"/>
+            </field> 
+        </form>
+    </formset>
+    <formset>
+        <form name="futureTaskFormBean">
+            <field
+                property="tasktitle"
+                depends="required">
+                <arg key="futureTaskFormBean.tasktitle"/>
+            </field> 
+            <field
+                property="taskdes"
+                depends="required">
+                <arg key="futureTaskFormBean.taskdes"/>
+            </field>
+            <field
+                property="taskstartdate"
+                depends="required,date">
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/MM/yyyy</var-value>
+                </var>
+                <arg key="futureTaskFormBean.taskstartdate"/>
+            </field>
+            <field
+                property="taskcompdate"
+                depends="required,date">
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/MM/yyyy</var-value>
+                </var>
+                <arg key="futureTaskFormBean.taskcompdate"/>
+            </field>
+            <field
+                property="taskpriority"
+                depends="required">
+                <arg key="futureTaskFormBean.taskpriority"/>
+            </field>
+        </form>
+    </formset>
+    <!-- For File Upload-->
+    <formset>
+        <form name="uploadCvForm">
+            <field
+                property="name"
+                depends="required">
+                <arg key="uploadCvForm.name"/>
+            </field>
+            <field 
+                property="email"
+                depends="required,email">
+                <arg key="uploadCvForm.email"/>
+            </field>
+            <field
+                property="phno"
+                depends="required,long">
+                <arg key="uploadCvForm.phno"/>
+            </field>
+            <field
+                property="technology"
+                depends="required">
+                <arg key="uploadCvForm.technology"/>
+            </field>
+                 
+            <field 
+                property="experience"
+                depends="required">
+                <arg key="uploadCvForm.experience"/>
+            </field>
+            <field
+                property="theFile"
+                depends="required">
+                <arg key="uploadCvForm.theFile"/>
+            </field>
+        </form>
+    </formset>
+    <formset>
+        <form name="viewDailyStatusReportBean">
+            <field
+                property="dateofstatusreport"
+                depends="required,date">
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/MM/yyyy</var-value>
+                </var>
+                <arg key="viewDailyStatusReportBean.dateofstatusreport"/>
+            </field>
+            
+            <field
+                property="employeeId"
+                depends="required">
+                <arg key="employeeProfFormBean.employeeId"/>
+            </field>
+        </form>
+    </formset>
+    
+    <formset>
+        <form name="viewMyDailyStatusReportBean">
+            <field
+                property="dateofstatusreport"
+                depends="required,date">
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/MM/yyyy</var-value>
+                </var>
+                <arg key="viewDailyStatusReportBean.dateofstatusreport"/>
+            </field>
+        </form>
+    </formset>
+    
+    <formset>
+        <form name="storeInterviewCandidateFormBean">
+            <field 
+            property="name"
+            depends="required">
+                <arg key="key.name"/>
+            </field>
+            <field 
+            property="contactNo"
+            depends="required">
+                <arg key="key.contactNo"/>
+            </field>
+            <field 
+            property="emailId"
+            depends="required,email">
+                <arg key="key.emailId"/>
+            </field>
+            <field 
+            property="alternateEmailId"
+            depends="email">
+                <arg key="key.alternateEmailId"/>
+            </field>
+            <field 
+            property="profileAppliedFor"
+            depends="required">
+                <arg key="key.profileAppliedFor"/>
+            </field>
+            <field 
+            property="qualification"
+            depends="required">
+                <arg key="key.qualification"/>
+            </field>
+            <field 
+            property="instituteName"
+            depends="required">
+                <arg key="key.instituteName"/>
+            </field>
+            <field 
+            property="passoutyr"
+            depends="required,date">
+                <arg key="key.passoutyr"/>
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/mm/yyyy</var-value>
+                </var>
+            </field>
+            <field 
+            property="interviewStatusDate"
+            depends="date">
+                <arg key="key.interviewStatusDate"/>
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/mm/yyyy</var-value>
+                </var>
+            </field>
+            
+             <field 
+            property="receiveCvDate"
+            depends="required,date">
+                <arg key="key.receiveCvDate"/>
+                <var>
+                    <var-name>datePatternStrict</var-name>
+                    <var-value>dd/mm/yyyy</var-value>
+                </var>
+            </field>
+        </form>
+    </formset>
+</form-validation>

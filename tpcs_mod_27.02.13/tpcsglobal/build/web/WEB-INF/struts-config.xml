@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="UserLoginVO" type="com.hrmgt.emp.vo.UserLoginVO"/>
+        <form-bean name="userLoginFormBean" type="com.hrmgt.emp.formbean.UserLoginFormBean"/>
+        <form-bean name="loginActionForm" type="com.hrmgt.emp.formbean.LoginActionForm"/>
+        <form-bean name="employeeActionFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="employeeSearchFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="salaryAccontFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="searchSalaryFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="employeeProfFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="employeePerFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="employeeGrievance" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="employeeEduFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="employeePastProfFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="employeeOffiFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="storeFinanDetBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="submitPasswordmgtFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="futureTaskFormBean" type="com.tpcs.employee.formbean.EmployeeActionFormBean"/>
+        <form-bean name="regTraineeActionForm" type="com.hrmgt.emp.formbean.RegTraineeActionForm"/>
+        
+        
+        <!--  Task Assignment Section  -->
+                <!--  Task Assignment Section  -->
+        <form-bean name="assignTaskFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfUserProfile" type="java.util.List"/>
+            <form-property name="listOfTaskCategory" type="java.util.List"/>
+            <form-property name="listOfTask" type="java.util.List" />                  
+        </form-bean> 
+        <form-bean name="insertEmpFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfLocationProfile" type="java.util.List"/>
+            <form-property name="listOfGradeProfile" type="java.util.List"/>
+            <form-property name="listOfDesignation" type="java.util.List"/>
+        </form-bean>
+        <form-bean name="insertUserProfBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfDesignation" type="java.util.List"/>
+        </form-bean>
+        <form-bean name="insertUserPersBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfLocation" type="java.util.List"/>
+            <form-property name="listOfCountry" type="java.util.List"/>
+        </form-bean>
+        <form-bean name="insertUserEduBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfUgQualification" type="java.util.List"/>
+            <form-property name="listOfUgSpecialization" type="java.util.List"/>
+            <form-property name="listOfUgUniversity" type="java.util.List"/>
+            <form-property name="listOfPgQualification" type="java.util.List"/>
+            <form-property name="listOfPgSpecialization" type="java.util.List"/>
+            <form-property name="listOfPgUniversity" type="java.util.List"/>
+        </form-bean>
+        
+        <form-bean name="insertOffDetBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfLocationId" type="java.util.List"/>
+            <form-property name="listOfSupervisoryId" type="java.util.List"/>
+            <form-property name="listOfParentIouId" type="java.util.List"/>
+            <form-property name="listOfSubIouId" type="java.util.List"/>
+            <form-property name="listOfGradeId" type="java.util.List"/>
+        </form-bean>
+        <form-bean name="salaryTaskFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfUserProfile" type="java.util.List"/>
+        </form-bean>
+        <form-bean name="viewEmaployeeDetailsBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfUserProfile" type="java.util.List"/>
+        </form-bean> 
+        
+        
+        <form-bean name="taskAssignmentFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="resourceId" type="java.lang.Integer"/>
+            <form-property name="taskCategoryId" type="java.lang.String"/>
+            <form-property name="taskDescription" type="java.lang.String" />
+            <form-property name="projectId" type="java.lang.String" />
+            <form-property name="targetDate" type="java.lang.String" />
+            <form-property name="statusId" type="java.lang.String" />  
+            <form-property name="taskAttachment" type="java.io.File" />  
+            
+        </form-bean> 
+        <form-bean name="displayTaskAssignmentFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="taskId" type="java.lang.String"/>
+            <form-property name="resourceId" type="java.lang.Integer"/>
+            <form-property name="categoryId" type="java.lang.String"/>
+            <form-property name="taskDescription" type="java.lang.String" />
+            <form-property name="projectId" type="java.lang.String" />
+            <form-property name="taskTargetDate" type="java.lang.String" />
+            <form-property name="statusId" type="java.lang.String" />  
+            <form-property name="taskCategoryList" type="java.util.List"/>
+            <form-property name="taskStatusList" type="java.util.List"/>
+            <form-property name="taskAttachment" type="java.io.File" />  
+            
+        </form-bean>     
+        
+        <form-bean name="taskAssignmentListForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="taskAssignmentList" type="java.util.List"/>       
+                      
+        </form-bean> 
+        
+        <form-bean name="submitStatusReportFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="statusReport" type="java.lang.String[]"/>   
+            <form-property name="billableHours" type="java.lang.String"/>
+            <form-property name="nonBillableHours" type="java.lang.String"/>                        
+        </form-bean> 
+         
+        <form-bean name="dailyStatusReportsBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfDailyStatusReports" type="java.util.List"/>                                   
+        </form-bean>
+        <form-bean name="futureTaskBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOffutureTaskReport" type="java.util.List"/>   
+            <form-property name="futureTaskId" type="java.lang.Integer"/>                                
+        </form-bean>
+        
+        <form-bean name="leaveApplyFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="leaveType" type="java.lang.String"/>   
+            <form-property name="startDate" type="java.lang.String"/>
+            <form-property name="endDate" type="java.lang.String"/>   
+            <form-property name="leaveDuration" type="java.lang.String"/>   
+            <form-property name="daysNum" type="java.lang.String"/>
+            <form-property name="reasonOfLeave" type="java.lang.String"/>   
+        </form-bean> 
+        <form-bean name="contactusformbean" type="com.hrmgt.emp.formbean.ContactUsForm"/>
+        
+        
+        <form-bean name="officeAttendanceForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfAttendanceReport" type="java.util.List"/>                                   
+        </form-bean>
+               
+        <form-bean name="storeContactFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="name" type="java.lang.String"/>   
+            <form-property name="nickName" type="java.lang.String"/>             
+            <form-property name="category" type="java.lang.String"/>
+            <form-property name="contactNumber" type="java.lang.String"/>   
+            <form-property name="alternateNumber" type="java.lang.String"/> 
+            <form-property name="emailId" type="java.lang.String"/> 
+            <form-property name="alternateEmailId" type="java.lang.String"/> 
+        </form-bean>
+        
+        <form-bean name="storeInterviewCandidateFormBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="name" type="java.lang.String"/>   
+            <form-property name="contactNo" type="java.lang.String"/>
+            <form-property name="emailId" type="java.lang.String"/> 
+            <form-property name="alternateEmailId" type="java.lang.String"/>
+            <form-property name="profileAppliedFor" type="java.lang.String"/>
+            <form-property name="otherPofileAppliedFor" type="java.lang.String"/>
+            <form-property name="keySkills" type="java.lang.String[]"/>
+            <form-property name="extraKeySkills" type="java.lang.String"/>  
+            <form-property name="interviewStatus" type="java.lang.String"/>
+            <form-property name="interviewStatusDate" type="java.lang.String"/>  
+            <form-property name="receiveCvDate" type="java.lang.String"/>
+            <form-property name="callFollowUp" type="java.lang.String"/>
+            <form-property name="remarks" type="java.lang.String"/>
+            <form-property name="status" type="java.lang.String"/>
+            <form-property name="intervieweeSlNo" type="java.lang.Integer"/>
+            <form-property name="instituteName" type="java.lang.String"/>
+            <form-property name="otherInstituteName" type="java.lang.String"/>
+            <form-property name="ohterKeySkills" type="java.lang.String"/>
+            <form-property name="passoutyr" type="java.lang.String"/>
+            <form-property name="intervieweeExperience" type="java.lang.String"/>
+            <form-property name="receivedate" type="java.lang.String"/>
+            <form-property name="listOfWorkFlow" type="java.util.List"/>
+            <form-property name="qualification" type="java.lang.String"/>
+            <form-property name="otherQualification" type="java.lang.String"/>
+            <form-property name="intervieweeStoreDate" type="java.lang.String"/>
+
+            
+            <form-property name="listOfProfile" type="java.util.List"/>
+            <form-property name="listOfInstitute" type="java.util.List"/>
+            <form-property name="listOfAcademicQualification" type="java.util.List"/>
+            <form-property name="listOfKeySkils" type="java.util.List"/>
+            <form-property name="msg" type="java.lang.String"/>
+
+        </form-bean>
+        
+        <form-bean name="essentialUtilityForm" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="jobId" type="java.lang.String"/>
+            <form-property name="jobDescription" type="java.lang.String"/>
+            <form-property name="empName" type="java.lang.String"/>
+            <form-property name="empId" type="java.lang.String"/>
+            <form-property name="jobCreationDate" type="java.lang.String"/>
+            <form-property name="jobStatus" type="java.lang.String"/>
+            <form-property name="jobUrgency" type="java.lang.String"/>
+            <form-property name="addInfo" type="java.lang.String"/>
+            <form-property name="taskCategoryId" type="java.lang.String"/>
+            <form-property name="taskDescription" type="java.lang.String" />
+            <form-property name="projectId" type="java.lang.String" />
+            <form-property name="targetDate" type="java.lang.String" />
+            <form-property name="statusId" type="java.lang.String" /> 
+            <form-property name="assignedByResourceId" type="java.lang.String" />
+            
+            <form-property name="message" type="java.lang.String"/>
+            
+            <form-property name="listOfJobs" type="java.util.List"/>
+            <form-property name="listOfTaskCategory" type="java.util.List"/>
+            <form-property name="listOfTask" type="java.util.List"/>
+            <form-property name="listOfUserProfile" type="java.util.List"/>
+
+
+        </form-bean>
+        
+        <form-bean name="viewDailyStatusReportBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="listStatusReport" type="java.util.List"/>
+            <form-property name="dateofstatusreport" type="java.lang.String"/>
+            <form-property name="employeeId" type="java.lang.String"/>
+            <form-property name="status" type="java.lang.Integer"/>
+        </form-bean>
+        <form-bean name="statusReportBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="listStatusReport" type="java.util.List"/>
+            <form-property name="status" type="java.lang.Integer"/>
+        </form-bean>
+        
+        <form-bean name="viewMyDailyStatusReportBean" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="listStatusReport" type="java.util.List"/>
+            <form-property name="dateofstatusreport" type="java.lang.String"/>
+        </form-bean>
+        <form-bean name="viewInterviewCandidateFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfInterViewee" type="java.util.List"/>                   
+        </form-bean>
+        <form-bean name="viewIntervieweeEmailFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="intervieweeEmailIds" type="java.lang.StringBuilder"/>                   
+        </form-bean>
+        <form-bean name="viewEmployeeEmailFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="employeeEmailIds" type="java.lang.StringBuilder"/>                   
+        </form-bean>
+        <form-bean name="viewContactDetailsFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfContactDetails" type="java.util.List"/>                   
+        </form-bean>
+        <form-bean name="newsAndEventFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="title" type="java.lang.String"/>    
+            <form-property name="date" type="java.lang.String"/>  
+            <form-property name="newsdetails" type="java.lang.String"/>    
+        </form-bean>
+        <form-bean name="planStatusReportFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="planstatusReport" type="java.lang.String[]"/>
+        </form-bean>
+        <form-bean name="enquryFormFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="name" type="java.lang.String"/>   
+            <form-property name="contactNo" type="java.lang.String"/>
+            <form-property name="altcontactNo" type="java.lang.String"/>
+            <form-property name="emailId" type="java.lang.String"/>  
+            <form-property name="qualification" type="java.lang.String"/>  
+            <form-property name="remarks" type="java.lang.String"/>                     
+        </form-bean>
+        
+ 
+
+        <form-bean name="viewEnquiryReportFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfEnquiry" type="java.util.List"/>                   
+        </form-bean>
+        <form-bean name="downloadCvFormBean" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfCv" type="java.util.List"/>                   
+        </form-bean>
+
+        <form-bean name="homeActionForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfNewsAndEvent" type="java.util.List"/>   
+             <form-property name="interviewScheduleDate" type="java.lang.String"/>  
+        </form-bean>
+        <form-bean name="newsActionForm" type="org.apache.struts.action.DynaActionForm">
+            <form-property name="listOfNewsAndEvent" type="java.util.List"/>   
+        </form-bean>
+        <form-bean name="uploadCvForm" type="com.hrmgt.emp.formbean.UploadCvForm"/>
+        <form-bean name="RegTraineeActionForm" type="com.hrmgt.emp.formbean.RegTraineeActionForm"/>
+    </form-beans>
+    
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="welcome"  path="/Welcome.do"/>
+    </global-forwards>
+
+    <action-mappings>
+        <action path="/Welcome" name="homeActionForm" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="populateLimitedNewsEvent">
+            <forward name="homePage" path="tpcsBaseLayout"/>
+        </action>    
+        
+        <action path="/employeezone" forward="/hrmgt/jsp/login.jsp"/>
+        <action input="contact-us" path="/contactus" name="contactusformbean" scope="session" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="storeContactUser" validate="true">
+            <forward name="storeContactUser" path="contact-us"/>    
+        </action> 
+        <action input="upload-cv" path="/upload-cv-server" name="uploadCvForm" scope="session" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="storeUploadCv" validate="true">
+            <forward name="storeUploadCv" path="upload-cv"/>
+        </action>
+        <action input="registration-training" path="/registration-training" name="regTraineeActionForm" scope="session" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="storeRegTrainee" validate="true">
+            <forward name="storeRegTrainee" path="registration-training"/>
+        </action>
+        <action input="/" name="newsActionForm" path="/more-news" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="populateNewsEvent" scope="session">
+            <forward name="moreNews" path="moreNewsDeatils"/>
+        </action>
+        
+        <!-- Begin: Forward Actions -->
+        <action path="/career-in-infrastructure-service" type="org.apache.struts.actions.ForwardAction" parameter="career-in-infrastructure-service"/>     
+        <action path="/attendance-policy" type="org.apache.struts.actions.ForwardAction" parameter="attendance-policy"/>     
+        <action path="/office-attaindance-and-leave-policy" type="org.apache.struts.actions.ForwardAction" parameter="office-attaindance-and-leave-policy"/>   
+        <action path="/leave-calendar" type="org.apache.struts.actions.ForwardAction" parameter="success"/> 
+        <action path="/office-regular-task" type="org.apache.struts.actions.ForwardAction" parameter="office-regular-task"/> 
+        <action path="/employee-services" type="org.apache.struts.actions.ForwardAction" parameter="employee-services"/>
+        <action path="/workforce-management" type="org.apache.struts.actions.ForwardAction" parameter="workforce-management"/>
+        <action path="/corporate-policy" type="org.apache.struts.actions.ForwardAction" parameter="corporate-policy"/>
+        <action path="/terms-and-conditions" type="org.apache.struts.actions.ForwardAction" parameter="terms-and-conditions"/>
+        <action path="/statement-of-facts" type="org.apache.struts.actions.ForwardAction" parameter="statement-of-facts"/>
+        <action path="/duties" type="org.apache.struts.actions.ForwardAction" parameter="duties"/>
+        <action path="/hours-of-work" type="org.apache.struts.actions.ForwardAction" parameter="hours-of-work"/>
+        <action path="/leave-and-vacation" type="org.apache.struts.actions.ForwardAction" parameter="leave-and-vacation"/>
+        <action path="/dress-code" type="org.apache.struts.actions.ForwardAction" parameter="dress-code"/>
+        <action path="/confidentiality" type="org.apache.struts.actions.ForwardAction" parameter="confidentiality"/>  
+        <action path="/separation-policy" type="org.apache.struts.actions.ForwardAction" parameter="separation-policy"/> 
+        <action path="/code-of-conduct" type="org.apache.struts.actions.ForwardAction" parameter="code-of-conduct"/> 
+        <action path="/office-timeout" type="org.apache.struts.actions.ForwardAction" parameter="office-timeout"/> 
+        <action path="/office-management" type="org.apache.struts.actions.ForwardAction" parameter="office-management"/> 
+        <action path="/receptionist-dashboard" type="org.apache.struts.actions.ForwardAction" parameter="receptionist-dashboard"/> 
+        <action path="/office-todays-checklist" type="org.apache.struts.actions.ForwardAction" parameter="office-todays-checklist"/> 
+        <action path="/office-weekly-checklist" type="org.apache.struts.actions.ForwardAction" parameter="office-weekly-checklist"/>
+        <action path="/office-monthly-checklist" type="org.apache.struts.actions.ForwardAction" parameter="office-monthly-checklist"/> 
+        <action path="/employee_management" type="org.apache.struts.actions.ForwardAction" parameter="employee_management"/> 
+        <action path="/control-panel" type="org.apache.struts.actions.ForwardAction" parameter="control-panel"/> 
+        <action path="/ilps" type="org.apache.struts.actions.ForwardAction" parameter="ilps"/> 
+        <action path="/home" type="org.apache.struts.actions.ForwardAction" parameter="success"/>
+        <action path="/global-hr" type="org.apache.struts.actions.ForwardAction" parameter="success"/>
+        <action path="/contact-no" type="org.apache.struts.actions.ForwardAction" parameter="contact-no"/> 
+        <action path="/news-and-media" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-news-event"/>  
+        <action path="/enquiry-interview" type="org.apache.struts.actions.ForwardAction" parameter="enquiry-interview"/>
+        <action path="/planstatusreport" type="org.apache.struts.actions.ForwardAction" parameter="planStatusReport"/>
+        <action path="/my-grievancestore" type="org.apache.struts.actions.ForwardAction" parameter="my-Grivance"/>
+        <action path="/passmgt" type="org.apache.struts.actions.ForwardAction" parameter="passwordManagement"/> 
+        <action path="/to-registration-training" type="org.apache.struts.actions.ForwardAction" parameter="registration-training"/>
+        <action path="/plan-your-future-task" type="org.apache.struts.actions.ForwardAction" parameter="futuretask"/>
+        <action path="/upload-cv" type="org.apache.struts.actions.ForwardAction" parameter="upload-cv"/>
+        <action path="/to-view-my-status-report" type="org.apache.struts.actions.ForwardAction" parameter="to-view-my-status-report"/>
+         <!-- Employee mgt -->
+       <!-- <action path="/insertEmployeeRecord"  type="org.apache.struts.actions.ForwardAction" parameter="insertEmployeeRecord"/>-->
+       
+        <action path="/insertUserProfile" name="insertUserProfBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserProfAction" >
+            <forward name="insertUserProfAction" path="insertUserProfile" />
+            <forward name="failure" path="failure"/>
+        </action>
+        <action input="/" name="viewEmaployeeDetailsBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="viewListOfManagementDashboard" path="/to-view-daily-status" validate="false">
+            <forward name="success" path="tpcs-view-status-reprt"/>
+            <forward name="failure" path="failure"/>
+        </action>
+        <action input="tpcs-view-status-reprt" name="viewDailyStatusReportBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" path="/view-status-report" validate="true" parameter="viewStatusReport">
+            <forward name="success" path="view-status-report"/>     
+            <forward name="failureStatus" path="tpcs-view-status-reprt"/>
+        </action>
+        <action input="/" name="viewDailyStatusReportBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" path="/activeStatus" validate="false" parameter="activeStatusReport">
+            <forward name="success" path="view-status-report"/>     
+            <forward name="failureStatus" path="tpcs-view-status-reprt"/>
+        </action>
+        <action input="/" name="viewDailyStatusReportBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" path="/rejectStatus" validate="false" parameter="rejectStatusReport">
+            <forward name="success" path="view-status-report"/>     
+            <forward name="failureStatus" path="tpcs-view-status-reprt"/>
+        </action>
+      
+        <action input="to-view-my-status-report" name="viewMyDailyStatusReportBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" path="/view-my-status-report" validate="true" parameter="viewMyStatusReport">
+            <forward name="success" path="view-my-status-report"/>     
+            <forward name="failureStatus" path="to-view-my-status-report"/>
+        </action>
+       
+        <action input="/" path="/tpcs-news-event" name="employeeActionFormBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="hrManageDashboard" validate="false">
+            <forward name="success" path="tpcs-news-event"/>
+            <forward name="failure" path="failure"/>
+        </action>
+        <action input="insertUserProfile" path="/inseruserprofinfo" name="employeeProfFormBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserProfileAction" scope="session" validate="true">
+            <forward name="failure" path="/insertUserProfile.do"/>
+            <forward name="success" path="/insertPerDet.do"/>
+        </action>
+        <action path="/insertPerDet" name="insertUserPersBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserPersAction">
+            <forward name="insertUserPersAction" path="insertPerDet" />
+        </action>
+        <action path="/updatePersDet" name="insertUserPersBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserPersAction">
+            <forward name="insertUserPersAction" path="updstePersDet" />
+        </action>
+        <action path="/insertEduDet" name="insertUserEduBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserEduAction">
+            <forward name="insertUserEduAction" path="insertEduDet" />
+        </action>
+        <action path="/updateEduDet" name="insertUserEduBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserEduAction">
+            <forward name="insertUserEduAction" path="updateEduDet" />
+        </action>
+        <action path="/updateEduDet" name="insertUserEduBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserEduAction"> 
+            <forward name="insertUserEduAction" path="updateEduDet" />
+        </action>
+        <action input="insertPerDet" path="/storeEmpPerRecord" name="employeePerFormBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserPersonalAction" scope="session" validate="true">
+            <forward name="success" path="/insertEduDet.do"/>
+        </action>
+        <action input="insertEduDet" path="/storeEmpEduRecord" name="employeeEduFormBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserEducationalAction" scope="session" validate="true">
+            <forward name="success" path="insertProfDet"/>
+        </action>
+        <action input="insertProfDet" path="/storeEmpProfRecord" name="employeePastProfFormBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserPastProfAction" scope="session" validate="false">
+            <forward name="success" path="/insertOffiDet.do"/>
+        </action>
+        <action path="/insertOffiDet" name="insertOffDetBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserOffiDetAction">
+            <forward name="insertUserOffiDetAction" path="inertOffiDet"/>
+        </action>
+        <action path="/updateOffiDet" name="insertOffDetBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserOffiDetAction">
+            <forward name="insertUserOffiDetAction" path="updateOffiDet"/>
+        </action>
+        <action input="inertOffiDet" path="/storeEmpoffiinfo" name="employeeOffiFormBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertUserOffiAction" scope="session" validate="true">
+            <forward name="success" path="inputFinanDet"/>
+        </action>
+        <action input="inputFinanDet" path="/storeFinanDet" name="storeFinanDetBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertEmpFinanAction" scope="session" validate="true">
+            <forward name="success" path="finalDet"/>            
+        </action>
+        <action path="/viewEmployeeRecord"  type="org.apache.struts.actions.ForwardAction" parameter="viewEmployeeRecord"/>
+        <action input="/viewEmployeeRecord.do" name="employeeActionFormBean" path="/viewEmpRecord" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="viewEmpRecord" validate="false">
+            <forward name="success" path="viewEmpDetails"/>
+            <forward name="searchbyname" path="viewAllEmployeeRecord"/>
+            <forward name="failure" path="/viewEmployeeRecord.do"/>
+        </action>
+        <action input="/" name="employeeActionFormBean" path="/my-profile" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="myProfileRecord" validate="false">
+            <forward name="success" path="viewEmpDetails"/>
+        </action>
+        
+        <action input="/viewEmployeeRecord.do" name="employeeActionFormBean" path="/searchEmpRecord" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="viewEmpRecord" validate="false">
+            <forward name="success" path="searchEmpRecord"/>
+            <forward name="searchbyname" path="viewAllEmployeeRecord"/>
+            <forward name="failure" path="success"/>
+            
+        </action>
+        <action path="/insertEmployeeRecord" name="insertEmpFormBean" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="insertEmpAction" scope="request">
+            <forward name="insertEmpAction" path="insertEmployeeRecord" />
+        </action>
+        <action input="insertEmployeeRecord" name="employeeActionFormBean" path="/storeEmpRecord" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="storeEmpRecord" validate="true">
+            <forward name="success" path="insertEmployeeRecord"/>
+        </action>
+       
+        <action  input="/"  path="/viewAllEmployeeRecord" name="employeeActionFormBean"   scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="viewAllEmpRecord" validate="false">
+            <forward name="success" path="viewAllEmployeeRecord"/>    
+        </action>
+        <action input="/" path="/deleteEmpRecord" name="employeeActionFormBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="deleteEmpRecord" validate="false">
+            <forward name="success" path="viewAllEmployeeRecord"/>
+        </action>
+        <action input="/" path="/modifyEmpInfo" name="employeeActionFormBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="modifyEmpInfo" validate="false">
+            <forward name="success"  path="modifyEmployeeRecord"/> 
+        </action>
+        <action input="/" path="/modifyEmployeeRecord" name="employeeActionFormBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="modifyEmployeeRecord" validate="false">
+            <forward name="success"  path="viewAllEmployeeRecord"/>  
+        </action>
+        <action input="my-Grivance" path="/storegrievance" name="employeeGrievance" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="empGreivance"  validate="true">
+            <forward name="success" path="my-Grivance"/>
+        </action>
+        <action input="" name="viewEmployeeEmailFormBean" path="/viewEmployeeEmailId" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="viewEmployeesEmailIds" validate="false">
+            <forward name="viewEmployeeEmails" path="viewEmployeeEmails"/>
+        </action>
+        <!--Update The Data of Employee-->
+           <!--Update Account Details-->
+        <action input="" name="storeFinanDetBean" path="/to-update-Account-Details" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="indivitualEmployeeInfo" validate="false">
+            <forward name="success" path="updateAccountDet"/>             
+        </action>
+         
+        <action input="updateAccountDet" name="storeFinanDetBean" path="/updateAccountDetails" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="updateEmployeeInfo" validate="true">
+            <forward name="success" path="updateAccountDet"/>             
+        </action>
+           <!--Update personal details-->
+        <action input="" name="employeePerFormBean" path="/to-update-pers-det" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="individualalEmpPersDet" validate="false">
+            <forward name="success" path="/updatePersDet.do"/>
+        </action>
+        <action input="updstePersDet" name="employeePerFormBean" path="/updareEmpPerRecord" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="updateEmployeePersDet" validate="true">
+            <forward name="success" path="updstePersDet"/>
+        </action>
+         <!--Update Educational Details-->
+        <action input="" name="employeeEduFormBean" path="/to-update-edu-det" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="individualalEmpEduDet" validate="false">
+            <forward name="success" path="/updateEduDet.do"/>
+        </action>
+         
+        <action input="" name="employeeEduFormBean" path="/updateEmpEduRecord" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="updateEmployeeEduDet" validate="false">
+            <forward name="success" path="updateEduDet"/>
+        </action>
+         <!-- Update Emp Office Details-->
+        <action input="" name="employeeOffiFormBean" path="/to-update-emp-office-det" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="individualalEmpOfficeDet" validate="false">
+            <forward name="success" path="/updateOffiDet.do"/>
+        </action>
+        <action input="updateOffiDet" name="employeeOffiFormBean" path="/updateEmpoffiinfo" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="updateEmployeeOffDet" validate="true">
+            <forward name="success" path="updateOffiDet"/>
+        </action>
+       <!--End:Update The Data of Employee-->
+           <!--Password Management-->
+        <action input="/passmgt.do" path="/submitPassManage" name="submitPasswordmgtFormBean" scope="request" type="com.tpcs.employee.action.EmployeeInfoAction" parameter="passwordManageAction" validate="true">
+            <forward name="passwordManageAction"  path="passwordManagement"/>   
+        </action>
+        
+        <!--End Of Password Management-->
+         <!-- End: employee mgt  -->
+        <!-- End : Forward Actions -->
+       
+        <action path="/loginpage" type="org.apache.struts.actions.ForwardAction" parameter="loginpage">
+            <forward name="loginpage" path="/loginpage.jsp"/>
+        </action>
+        <action input="/employeezone.do" name="loginActionForm" path="/postlogin" scope="request" type="com.hrmgt.emp.action.LoginAction" parameter="userLogin" validate="true">
+            <forward name="success" path="success"/>
+            <forward name="failure" path="/employeezone.do"/>
+        </action>      
+        <action path="/logout" scope="request" type="com.hrmgt.emp.action.LoginAction" parameter="userLogout">
+            <forward name="success" path="/employeezone.do"/>          
+        </action>      
+        <action   path="/officein"  type="com.hrmgt.emp.action.UserLoginAction" parameter="officein" >
+            <forward name="officein" path="officein"/>
+        </action>
+        <action   path="/postin" name="userLoginFormBean" type="com.hrmgt.emp.action.UserLoginAction" parameter="postin" >
+            <forward name="postin" path="postin"/>
+        </action>
+        
+        <action   path="/close"  type="com.hrmgt.emp.action.UserLoginAction" parameter="close" >
+            <forward name="close" path="close"/>
+        </action>
+        
+        <action   path="/office-attendance-report" name="officeAttendanceForm" type="com.hrmgt.emp.action.UserLoginAction" parameter="officeAttendanceReport" >
+            <forward name="office-attendance-report" path="office-attendance-report"/>
+        </action>
+        
+        <action   path="/postclose" name="userLoginFormBean" type="com.hrmgt.emp.action.UserLoginAction" parameter="postclose" >
+            <forward name="postclose" path="/office-attendance-report.do"/>
+        </action>
+        <action   path="/userentry"  type="com.hrmgt.emp.action.UserLoginAction" parameter="userentry" >
+            <forward name="userentry" path="userentry"/>
+        </action>
+        <action   path="/postuserentry" name="userLoginFormBean" type="com.hrmgt.emp.action.UserLoginAction" parameter="postuserentry" >
+            <forward name="postuserentry" path="postuserentry"/>
+        </action>
+        <action   path="/viewdata"  type="com.hrmgt.emp.action.UserLoginAction" parameter="viewdata" >
+            <forward name="viewdata" path="viewdata"/>
+        </action>
+        <!--  Task Assignment Section  -->
+        <action input="salaryslip" path="/salarySlip" name="salaryAccontFormBean" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="entrySalary" scope="session" validate="true">
+            <forward name="entrySalary" path="salaryslip"/>
+        </action>
+        <action path="/salaryslip" name="salaryTaskFormBean" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="salarySlip">
+            <forward name="salarySlip" path="salaryslip"/>
+        </action>
+        <action path="/searchslipdetails" name="salaryTaskFormBean" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="salarySlip">
+            <forward name="salarySlip" path="searchslipdetails"/>
+        </action>
+        <action path="/search-salary" name="searchSalaryFormBean" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="searchSalarySlip" scope="request" validate="false">
+            <forward name="searchSalarySlip" path="searchSalarySlip"/>
+        </action>
+        <action path="/to-download-cv" name="downloadCvFormBean" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="downloadCurriculamVitae" scope="request" validate="false">
+            <forward name="downloadCurriculamVitae" path="downloadCv"/>
+            <forward name="failure" path="failure"/>
+        </action>
+        <action path="/assigntask" name="assignTaskFormBean" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="assignTask">
+            <forward name="assigntask" path="assigntask"/>
+        </action>
+        <action input="futuretask" path="/store-future-task" name="futureTaskFormBean" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="futureTask" validate="true">
+            <forward name="futureTask" path="futuretask"/>
+        </action>
+        <action path="/view-future-task" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="viewFutureTask" name="futureTaskBean">
+            <forward name="viewFutureTask" path="viewFutureTask"/> 
+        </action>
+        <action input="/" path="/deleteFutureTask" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="deleteFutureTask" name="futureTaskBean" validate="false">
+            <forward name="deleteFutureTask" path="viewFutureTask"/> 
+        </action>
+        <action  path="/edittask" type="com.admin.taskmgt.action.TaskAssignmentAction" name="displayTaskAssignmentFormBean" scope="request" parameter="populateAssignedtask">
+            <forward name="viewtask" path="viewtask"/>
+        </action> 
+        <action path="/planStatusReport" type="com.admin.taskmgt.action.TaskAssignmentAction" name="planStatusReportFormBean" scope="request" parameter="planStatusReport">
+            <forward name="planStatusReport" path="planStatusReport"/>
+        </action>
+        <action  path="/updateTaskAssignment" type="com.admin.taskmgt.action.TaskAssignmentAction" name="taskAssignmentFormBean" scope="request" parameter="updateTaskAssignment">
+            <forward name="updateTaskAssignment" path="/assignedtasklist.do"/>
+        </action> 
+        <action path="/statusreport" type="org.apache.struts.actions.ForwardAction" parameter="statusreport"/>           
+        <action path="/taskAssignment" type="com.admin.taskmgt.action.TaskAssignmentAction" name="taskAssignmentFormBean" parameter="taskAssignment">
+            <forward name="taskAssignment" path="taskAssignment"/>
+        </action> 
+        <action path="/assignedtasklist" type="com.admin.taskmgt.action.TaskAssignmentAction" name="taskAssignmentListForm" scope="request" parameter="assignedtasklist">
+            <forward name="assignedtasklist" path="assignedtasklist"/>
+        </action> 
+        <action path="/submitStatusReport" type="com.admin.taskmgt.action.TaskAssignmentAction" name="submitStatusReportFormBean" scope="request" parameter="submitStatusReport">
+            <forward name="submitStatusReport" path="submitStatusReport"/>
+        </action> 
+        <action path="/my-status-report" type="com.admin.taskmgt.action.TaskAssignmentAction" name="dailyStatusReportsBean" scope="request" parameter="viewStatusReport">
+            <forward name="viewStatusReport" path="my-status-report"/>
+        </action> 
+        <action path="/reception-goal-sheet" type="com.admin.taskmgt.action.TaskAssignmentAction" name="employeeGoalSheetBeen" scope="request" parameter="storeEmployeeGoalSheet">
+            <forward name="storeEmployeeGoalSheet" path="reception-goal-sheet"/>
+        </action> 
+        
+        <action input="/" path="/submitNewsEvent" type="com.admin.taskmgt.action.TaskAssignmentAction" name="newsAndEventFormBean" scope="request" parameter="submitNewsReport">
+            <forward name="submitNewsReport" path="tpcs-news-event"/>    
+        </action>
+        <action input="" name="enquryFormFormBean" path="/enquiry-form" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="storeEnquiryForm" validate="false">
+            <forward name="storeEnquiryForm" path="enquiry-interview"/>            
+        </action>
+        <action input="" name="viewEnquiryReportFormBean" path="/view-enquiry-report" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="viewEnquiryReport" validate="false">
+            <forward name="viewEnquiryReport" path="viewEnquiryReport"/>
+        </action>
+       
+        <!-- Begin : Leave Management System -->
+        <action path="/apply-leave" type="com.tpcs.employee.action.LeaveManagementAction" name="leaveApplyFormBean" scope="request" parameter="applyLeave">
+            <forward name="applyLeave" path="apply-leave"/>
+        </action>
+        <!-- End : Leave Management System -->
+        <action input="" name="storeContactFormBean" path="/store-contact-no" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="storeContactNumber" validate="false">
+            <forward name="storeContactNo" path="contact-no"/>
+        </action>
+        <action input="" name="viewContactDetailsFormBean" path="/view-contact-no" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="viewContactDetails" validate="false">
+            <forward name="viewContactDetails" path="viewContactDetails"/>
+        </action>
+        <action input="" name="viewIntervieweeEmailFormBean" path="/view-interviewee-emails" scope="request" type="com.admin.taskmgt.action.TaskAssignmentAction" parameter="viewIntervieweeEmailIds" validate="false">
+            <forward name="viewIntervieweeEmails" path="viewIntervieweeEmails"/>
+        </action>
+        <action path="/career-for-freshers" type="org.apache.struts.actions.ForwardAction" parameter="career-for-freshers"/> 
+        <action path="/about-us" type="org.apache.struts.actions.ForwardAction" parameter="about-us"/>
+        <action path="/tpcs-services" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-services"/> 
+        <action path="/tpcs-portfolio" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-portfolio"/>
+        <action path="/corporate-training" type="org.apache.struts.actions.ForwardAction" parameter="corporate-training"/> 
+        <action path="/tpcs-work-shop" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-work-shop"/>    
+        <action path="/tpcs-quick-links" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-quick-links"/>
+        <action path="/tpcs-career" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-career"/>
+        <action path="/contact-us" type="org.apache.struts.actions.ForwardAction" parameter="contact-us"/>
+        <action path="/company-profile" type="org.apache.struts.actions.ForwardAction" parameter="company-profile"/> 
+        <action path="/photo-gallary-kolkata" type="org.apache.struts.actions.ForwardAction" parameter="photo-gallary-kolkata"/> 
+        <action path="/photo-galary-siliguri" type="org.apache.struts.actions.ForwardAction" parameter="photo-galary-siliguri"/> 
+        <action path="/why-tpcs" type="org.apache.struts.actions.ForwardAction" parameter="why-tpcs"/>
+        <action path="/our-vision-and-mission" type="org.apache.struts.actions.ForwardAction" parameter="our-vision-and-mission"/>
+        <action path="/our-vision-and-mission" type="org.apache.struts.actions.ForwardAction" parameter="our-vision-and-mission"/>
+        <action path="/it-development" type="org.apache.struts.actions.ForwardAction" parameter="it-development"/> 
+        <action path="/webdesign-and-hosting" type="org.apache.struts.actions.ForwardAction" parameter="webdesign-and-hosting"/> 
+        <action path="/tpcs-clients" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-clients"/>  
+        <action path="/technical-team" type="org.apache.struts.actions.ForwardAction" parameter="technical-team"/>
+        <action path="/tpcs-training" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-training"/>         
+        <action path="/tpcs-internship" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-internship"/>
+        <action path="/career-for-ep" type="org.apache.struts.actions.ForwardAction" parameter="career-for-ep"/>
+        <action path="/contact-at-siliguri" type="org.apache.struts.actions.ForwardAction" parameter="contact-at-siliguri"/>
+        <action path="/social-cards" type="org.apache.struts.actions.ForwardAction" parameter="social-cards"/>
+        <action path="/travel-and-tourism" type="org.apache.struts.actions.ForwardAction" parameter="travel-and-tourism"/>
+        <action path="/telecom" type="org.apache.struts.actions.ForwardAction" parameter="telecom"/>
+        <action path="/php-courses" type="org.apache.struts.actions.ForwardAction" parameter="php-courses"/>        
+        <action path="/business-cards" type="org.apache.struts.actions.ForwardAction" parameter="business-cards"/>
+        <action path="/banking-domain" type="org.apache.struts.actions.ForwardAction" parameter="banking-domain"/>
+        <action path="/education-and-training-domain" type="org.apache.struts.actions.ForwardAction" parameter="education-and-training-domain"/>
+        <action path="/health-care-domain" type="org.apache.struts.actions.ForwardAction" parameter="health-care-domain"/>            
+        <action path="/media-and-info-domain" type="org.apache.struts.actions.ForwardAction" parameter="media-and-info-domain"/>   
+        <action path="/consumer-products-domain" type="org.apache.struts.actions.ForwardAction" parameter="consumer-products-domain"/>         
+        <action path="/life-science-domain" type="org.apache.struts.actions.ForwardAction" parameter="life-science-domain"/>
+        <action path="/govt-domain" type="org.apache.struts.actions.ForwardAction" parameter="govt-domain"/>         
+        <action path="/product-manufacturing-domain" type="org.apache.struts.actions.ForwardAction" parameter="product-manufacturing-domain"/>
+         <!-- Product Sections -->
+        <action path="/tpcs-products-intro" type="org.apache.struts.actions.ForwardAction" parameter="tpcs-products-intro"/>
+        <action path="/hosp-mgt-system" type="org.apache.struts.actions.ForwardAction" parameter="hosp-mgt-system"/>
+        <action path="/smart-office-management" type="org.apache.struts.actions.ForwardAction" parameter="smart-office-management"/>         
+        <action path="/asset-mgt-system" type="org.apache.struts.actions.ForwardAction" parameter="asset-mgt-system"/>         
+        <action path="/hr-mgt-system" type="org.apache.struts.actions.ForwardAction" parameter="hr-mgt-system"/>
+        <action path="/transport-mgt-system" type="org.apache.struts.actions.ForwardAction" parameter="transport-mgt-system"/>        
+        <action path="/book-publication-management-system" type="org.apache.struts.actions.ForwardAction" parameter="book-publication-management-system"/>        
+        <action path="/purchase-store-mgt" type="org.apache.struts.actions.ForwardAction" parameter="purchase-store-mgt"/>        
+        <action path="/financial-accounting" type="org.apache.struts.actions.ForwardAction" parameter="financial-accounting"/>      
+        <action path="/meterial-mgt-system" type="org.apache.struts.actions.ForwardAction" parameter="meterial-mgt-system"/>
+        <action path="/multimedia-and-logo-design" type="org.apache.struts.actions.ForwardAction" parameter="multimedia-and-logo-design"/>
+        <action path="/web-dev-applications" type="org.apache.struts.actions.ForwardAction" parameter="web-dev-applications"/>
+        <action path="/open-source-products" type="org.apache.struts.actions.ForwardAction" parameter="open-source-products"/>
+        
+    </action-mappings>
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>
